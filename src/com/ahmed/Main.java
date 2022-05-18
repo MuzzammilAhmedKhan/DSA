@@ -6,7 +6,11 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        Scanner sc = new Scanner(System.in);
-        System.out.println(sc.nextLine());
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println(sc.nextLine());
+        Integer num = new Integer(23);
+        System.out.println(num);
+        System.out.println(num.toString());
     }
+
 }

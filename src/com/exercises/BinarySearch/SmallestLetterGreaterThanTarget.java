@@ -9,7 +9,7 @@ package com.exercises.BinarySearch;
 public class SmallestLetterGreaterThanTarget {
     public static void main(String[] args) {
         char[] arr = new char[]{'c','f','j'};
-        char target = 'c';
+        char target = 'd';
         System.out.println(binarySearch(arr, target));
     }
     static char binarySearch(char[] arr, char target){
@@ -17,7 +17,7 @@ public class SmallestLetterGreaterThanTarget {
 
         while(start <= end){
             int mid = start + (end - start) / 2;
-            if(target > arr[mid]){ // or    if(target >= arr[mid]).....
+            if(target >= arr[mid]){ // or    if(target >= arr[mid]).....
                 start = mid + 1;   //       else if{target <= arr[mid])......
             } else {
                 end = mid - 1;
