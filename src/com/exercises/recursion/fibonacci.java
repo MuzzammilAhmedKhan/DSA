@@ -1,19 +1,14 @@
 package com.exercises.recursion;
 
-public class fibonacci {
+public class Fibonacci {
     public static void main(String[] args) {
-        System.out.println(fib(10));
+        System.out.println(fibonacci(20));
     }
 
-    static int fib(int n){
+    static int fibonacci(int n){
         if(n < 2){
             return n;
         }
-
-        return fib(n - 1) + fib(n - 2);
-    }
-
-    static int fibFormula(int n){
-        return (int)((Math.pow(((1 + Math.sqrt(5)) / 2) , n)) / Math.sqrt(5));
+        return fibonacci(n - 1) + fibonacci(n - 2);
     }
 }
