@@ -18,7 +18,7 @@ public class Reverse {
         int digits = (int)(Math.log10(n)) + 1;
         return helper(n, digits);
     }
-
+    //helper helps reverse2
     private static int helper(int n, int digits) {
         if(n % 10 == n){
             return n;
@@ -29,8 +29,7 @@ public class Reverse {
     }
 
     public static void main(String[] args) {
-        reverse1(12345);
-        System.out.println((sum));
+        System.out.println(reverse2(12345));
     }
 
 
