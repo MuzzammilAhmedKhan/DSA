@@ -1,5 +1,6 @@
 package com.ahmed;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Inputs {
@@ -21,6 +22,12 @@ public class Inputs {
 
 //            byte b = 50;
 //            b = b * 2; //erroe b/c no explicit casting;
+        ArrayList<Integer> al = new ArrayList<Integer>();
+        al.add(1);
+
+//        System.out.println(al.get(0)++);
+//        for(int i = 0; i < al.size();i++){
+//        }
 
 
 

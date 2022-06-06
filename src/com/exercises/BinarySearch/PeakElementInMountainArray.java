@@ -4,16 +4,16 @@ public class PeakElementInMountainArray {
     public static void main(String[] args) {
         int[] arr = new int[]{1,2,3,4,5,3,1};
         int target = 3;
-        int peak = peakElement(arr);
-        int targetFromAscArr = orderAgnosticBinarySearch(arr, target, 0, peak);
+        int peakIndex = peakElementIndex(arr);
+        int targetFromAscArr = orderAgnosticBinarySearch(arr, target, 0, peakIndex);
         if(targetFromAscArr != -1){
             System.out.println(targetFromAscArr);
         } else {
-            System.out.println(orderAgnosticBinarySearch(arr, target, peak + 1, arr.length - 1));
+            System.out.println(orderAgnosticBinarySearch(arr, target, peakIndex + 1, arr.length - 1));
         }
     }
 
-    static int peakElement(int[] arr){
+    static int peakElementIndex(int[] arr){
         int start = 0;
         int end = arr.length - 1;
         while(start < end){
