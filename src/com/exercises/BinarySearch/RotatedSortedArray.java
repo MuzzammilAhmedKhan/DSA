@@ -3,12 +3,13 @@ package com.exercises.BinarySearch;
 public class RotatedSortedArray {
     public static void main(String[] args) {
         int[] arr = new int[]{3, 5, 1};
-        int target = 3;
+        int target = 1;
         System.out.println(search(arr, target));
     }
 
     public static int search(int[] nums, int target) {
         int pivot = findPivot(nums);
+        //if you do not find a pivot, i.e, pivot = -1, it means that the array is not rotated
         if(pivot == -1){
             return binarySearch(nums, target, 0, nums.length - 1);
         }

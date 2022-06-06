@@ -19,7 +19,6 @@ public class CyclicSort {
                 i++;
             }
         }
-
     }
 
     static void swap(int[] arr, int first, int second){
