@@ -14,30 +14,24 @@ public class MigratoryBirds {
     }
 
     public static int migratoryBirds(List<Integer> arr) {
-        // Write your code here
-        int[] count = new int[6];
+        int[] freqArr = new int[6];
         for(int i = 0; i < arr.size(); i++){
-            int temp = arr.get(i);
-            count[temp]++;
+            freqArr[arr.get(i)]++;
         }
 
-        int maxOccurances = 0;
-        int minNumber = Integer.MAX_VALUE;
-        for(int i = 1; i < count.length; i++){
-            if(count[i] == 0){
+        int max = 0;
+        int minIndex = freqArr.length - 1;
+        for(int i = 1; i < freqArr.length; i++){
+            if(freqArr[i] == 0){
                 continue;
             }
-
-            if(count[i] > maxOccurances){
-                maxOccurances = count[i];
-            }
-            int exMax = maxOccurances;
-            if(i < minNumber){
-                minNumber = i;
+            if(max < freqArr[i]){
+                max = freqArr[i];
+                minIndex = i;
             }
         }
 
-        return minNumber;
+        return minIndex;
 
     }
 
